@@ -1,0 +1,48 @@
+{
+  "name": "jx-caches",
+  "version": "0.1.0",
+  "description": "Cache for all develop ends~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "prebuild": "echo I run before the build script",
+    "postbuild": "echo I run after the build script",
+    "build": "npm run clean && NODE_ENV=production gulp build --gulpfile scripts/compiler.js",
+    "pub": "npm run build && npm publish",
+    "dev": "node scripts/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryArtists/jx-caches.git"
+  },
+  "keywords": [
+    "web",
+    "cache",
+    "localstorage",
+    "session",
+    "weapp"
+  ],
+  "author": "fallenink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BinaryArtists/jx-caches/issues"
+  },
+  "homepage": "https://github.com/BinaryArtists/jx-caches#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-runtime": "^6.26.0",
+    "check-versions": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ]
+}
